@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Interactive App</title>
+  <title>Travelers Estimator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -41,17 +41,18 @@
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function multiply(x, y) {
+      return x * y
     }
-    console.log('add=' + add)
+
+    console.log('multiply=' + multiply)
 
     console.log('Specify Vue components .......................')
 
     new Vue({
       el: '#vue-app',
       data: {
-        guest: 'Lilly',
+        guest: 'Nithya',
         firstNumber: 5,
         secondNumber: 3
       },
@@ -59,7 +60,7 @@
         result() {
           const i = parseInt(this.firstNumber)
           const j = parseInt(this.secondNumber)
-          return this.guest + ', your sum is ' + add(i, j) + '.'
+          return this.guest + ', your product is ' + multiply(i , j)  + '.'
         }
       }
     })
