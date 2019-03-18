@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Travelers Estimator</title>
+  <title>Student Estimator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -18,15 +18,18 @@
     <h3>Two-way data binding watches for changes in inputs and automatically updates outputs.</h3>
 
     <p>Enter your name:
-      <input v-model="guest" type="text">
+      <input v-model="name" type="text">
     </p>
 
-    <p>Enter first number:
-      <input v-model="firstNumber" type="number">
+    <p>Enter studentsPerCourse:
+      <input v-model="first number" type="number">
     </p>
 
-    <p>Enter second number:
-      <input v-model="secondNumber" type="number">
+    <p>Enter coursesPerTerm:
+      <input v-model="second number" type="number">
+    </p>
+    <p>Enter terms:
+      <input v-model="third number" type="number">
     </p>
 
     <p>{{result}}</p>
@@ -41,8 +44,8 @@
 
     console.log('Declare testable functions.....................')
 
-    function multiply(x, y) {
-      return x * y
+    function multiply(x, y, z) {
+      return x * y *z
     }
 
     console.log('multiply=' + multiply)
@@ -54,13 +57,15 @@
       data: {
         guest: 'Nithya',
         firstNumber: 5,
-        secondNumber: 3
+        secondNumber: 3,
+        thirdNumber: 4
       },
       computed: {
         result() {
           const i = parseInt(this.firstNumber)
           const j = parseInt(this.secondNumber)
-          return this.guest + ', your product is ' + multiply(i , j)  + '.'
+          const k = parseInt(this.thirdNumber)
+          return this.guest + ', your product is ' + multiply(i , j , k)  + '.'
         }
       }
     })
